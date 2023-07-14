@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8cskeqtfp56i"]
+
+[ext_resource type="Script" path="res://scenes/Menu.gd" id="1_pjydy"]
+
+[node name="Server" type="Node2D"]
+z_index = 1
+script = ExtResource("1_pjydy")
+
+[node name="IPLabel" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 9.0
+offset_right = 93.0
+offset_bottom = 35.0
+text = "Server IP"
+
+[node name="IPInput" type="TextEdit" parent="."]
+offset_left = 101.0
+offset_top = 4.0
+offset_right = 242.0
+offset_bottom = 39.0
+text = "127.0.0.1"
+
+[node name="PortLabel" type="Label" parent="."]
+offset_left = 6.0
+offset_top = 49.0
+offset_right = 93.0
+offset_bottom = 75.0
+text = "Server port"
+
+[node name="PortInput" type="TextEdit" parent="."]
+offset_left = 101.0
+offset_top = 44.0
+offset_right = 242.0
+offset_bottom = 79.0
+text = "23452"
+
+[node name="PlayersLabel" type="Label" parent="."]
+offset_left = 37.0
+offset_top = 89.0
+offset_right = 94.0
+offset_bottom = 115.0
+text = "Players"
+
+[node name="PlayersInput" type="TextEdit" parent="."]
+offset_left = 101.0
+offset_top = 84.0
+offset_right = 242.0
+offset_bottom = 119.0
+text = "32"
+
+[node name="Log" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(0, 648)
+offset_left = 250.0
+offset_right = 1150.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+bbcode_enabled = true
+scroll_following = true
+
+[node name="StartServerButton" type="Button" parent="."]
+offset_left = 5.0
+offset_top = 125.0
+offset_right = 242.0
+offset_bottom = 157.0
+text = "Start server"
+
+[node name="StartClientButton" type="Button" parent="."]
+offset_left = 5.0
+offset_top = 163.0
+offset_right = 242.0
+offset_bottom = 195.0
+text = "Start client"
+
+[node name="ConnectTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
